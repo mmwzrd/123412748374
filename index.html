@@ -16,6 +16,36 @@
             scroll-behavior: smooth; /* Плавная прокрутка */
         }
 
+/* --- Стили для Викторины/Теста --- */
+.quiz-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 30px 20px;
+    background-color: #0a0a20;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для iframe */
+#letstest_frame {
+    /* Эти стили встроены прямо в HTML-тег iframe для гарантии */
+    display: block; /* Убираем лишние отступы */
+    border-radius: 10px; /* Скругляем края для соответствия дизайну */
+    overflow: hidden; /* Обрезает лишнее, если есть */
+}
+
+/* Адаптивность для викторины */
+@media (max-width: 600px) {
+    #letstest_frame {
+        height: 500px !important; /* Делаем iframe короче на маленьких экранах */
+        max-width: 100%;
+    }
+}
+
+
         /* --- Стили для Шапки (Титульный лист) --- */
         header {
             display: flex;
@@ -343,18 +373,25 @@
                     <li><strong>Длительность года:</strong> 165 земных лет</li>
                     <li><strong>Интересный факт:</strong> На нем бушуют самые сильные и быстрые ветры в Солнечной системе, скорость которых может достигать 2 100 км/ч</li>
                 </ul>
-            </div>
+            </div>              
         </section>
-
+    <div class="quiz-container">
+        <h2 style="color: #0010aa; text-align: center; margin-bottom: 30px;">Небольшой опрос</h2>
+        <iframe 
+            id='letstest_frame' 
+            src='https://letstest.ru/96408?widget=a1566b71-2aae-4037-a8c0-0413c32bab92&bg_color=000000;' 
+            style='width:100%; border:none; height:600px; max-width: 600px;' 
+            title="Тест Солнечная система"
+        ></iframe>
+    </div>
     </main>
-
     <footer>
         <section id="conclusion">
             <h3>Заключение</h3>
             <p>Наша Солнечная система — это удивительное и невероятно разнообразное место, от пылающего Солнца до ледяных окраин Нептуна. Изучение этих миров помогает нам лучше понять не только Вселенную, но и наше собственное место в ней.</p>
             <p>Этот сайт — лишь краткий обзор. Путешествие только начинается!</p>
         </section>
-
+        
         <hr style="border-color: #333; width: 50%;">
 
         <section id="sources">
